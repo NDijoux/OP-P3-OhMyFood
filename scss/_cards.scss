@@ -1,0 +1,66 @@
+@import "./variables";
+
+#restaurant {
+  background-color: $color-grey;
+  padding: 20px 15px 40px 15px;
+  margin: 40px 0px 0px 0px;
+}
+
+.restaurant__button {
+  font-family: "Roboto", sans-serif;
+  font-size: 16px;
+  font-weight: bold;
+  border: none;
+  padding: 5px 10px 5px 10px;
+  background-color: $color-tertiary;
+  color: rgb(0, 141, 0);
+}
+
+.restaurant__card {
+  position: relative;
+  border-radius: 15px;
+  background-color: white;
+  overflow: hidden;
+  box-shadow: rgba(100, 100, 111, 0.2) 0px 7px 29px 0px;
+  margin: 15px 0px 15px 0px;
+  .card__image {
+    width: 100%;
+    max-width: 737px;
+    height: 160px;
+    border-top-left-radius: 15px;
+    border-top-right-radius: 15px;
+    object-fit: cover;
+  }
+  .card__button {
+    position: absolute;
+    top: 5%;
+    left: 72%;
+    font-family: "Roboto", sans-serif;
+    font-size: 16px;
+    font-weight: bold;
+    border: none;
+    padding: 5px 10px 5px 10px;
+    background-color: $color-tertiary;
+    color: rgb(0, 141, 0);
+  }
+  .card__caption {
+    padding: 15px 0px 15px 10px;
+  }
+  .card__title {
+    margin: 0px 0px 5px 0px;
+  }
+  .card__byline {
+    margin: 0;
+    margin-top: -2px;
+    color: grey;
+  }
+  .card__like {
+    display: flex;
+    justify-content: right;
+    padding-right: 25px;
+    &:hover {
+      transition: 0.1s;
+      color: rgb(255, 121, 218);
+    }
+  }
+}

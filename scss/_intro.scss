@@ -1,0 +1,110 @@
+@import "./variables";
+@import "./responsive";
+
+#intro {
+  margin-top: 20px;
+}
+
+#intro__search {
+  display: flex;
+  align-items: center;
+  height: 50px;
+  margin: 0 auto;
+  background-color: rgba(192, 192, 192, 0.973);
+  .search__dot {
+    margin-right: 10px;
+  }
+  form {
+    display: inline-block;
+  }
+}
+
+#place-search {
+  border: none;
+  width: 113px;
+  background-color: rgba(201, 200, 200, 0.61);
+}
+
+input::placeholder {
+  color: black;
+  font-weight: 500;
+  font-family: "Roboto", sans-serif;
+}
+
+.intro__presentation {
+  background-color: $color-grey;
+  padding: 20px 35px 20px 35px;
+  text-align: center;
+  align-items: center;
+  .presentation__heading {
+    font-size: 25px;
+  }
+  .presentation__byline {
+    color: grey;
+  }
+  .presentation__button {
+    background: rgb(255, 121, 218);
+    background: linear-gradient(
+      90deg,
+      rgba(255, 121, 218, 1) 0%,
+      rgba(147, 86, 220, 1) 100%
+    );
+    border: none;
+    color: white;
+    padding: 15px;
+    border-radius: 25px;
+    font-size: 16px;
+    box-shadow: rgba(100, 100, 111, 0.2) 0px 7px 29px 0px;
+  }
+}
+
+.functioning__heading {
+  margin-left: 15px;
+}
+
+.functioning__list {
+  list-style: none;
+  counter-reset: section;
+  padding-left: 15px;
+}
+
+.list__element {
+  border-style: solid;
+  border-color: $color-grey;
+  border-radius: 20px;
+  border-width: 1px;
+  align-items: center;
+  padding: 20px 0px 20px 30px;
+  margin-top: 20px;
+  box-shadow: rgba(100, 100, 111, 0.2) 0px 7px 29px 0px;
+  &:hover {
+    transition: 0.1s;
+    background-color: rgb(221, 201, 243);
+  }
+  &::before {
+    counter-increment: section;
+    content: counter(section);
+    text-align: center;
+    display: inline-block;
+    color: white;
+    background-color: $color-primary;
+    border: 1px solid $color-primary;
+    border-radius: 50%;
+    height: 17px;
+    width: 17px;
+    position: absolute;
+    left: 7px;
+  }
+  .element__icon {
+    margin-right: 20px;
+    color: rgba(192, 192, 192, 0.973);
+    &:hover {
+      transition: 0.1s;
+      color: $color-primary;
+    }
+  }
+  .element__byline {
+    font-size: 18px;
+    font-weight: bold;
+  }
+}
