@@ -10,9 +10,9 @@
   align-items: center;
   height: 50px;
   margin: 0 auto;
-  background-color: $color-grey;
-  border-top: 1px;
-  border-color: $color-dark-grey;
+  background-color: $color-mid-grey;
+  border-top: ridge  2px;
+  border-color: $color-mid-grey;
   .search__dot {
     margin-right: 10px;
   }
@@ -24,7 +24,7 @@
 #place-search {
   border: none;
   width: 113px;
-  background-color: rgba(201, 200, 200, 0.61);
+  background-color: $color-mid-grey;
 }
 
 input::placeholder {
@@ -65,14 +65,12 @@ input::placeholder {
 }
 
 .functioning__list {
-  list-style: none;
-  counter-reset: section;
-  padding-left: 15px;
+padding: 0px 15px 0px 15px;
 }
 
 .list__element {
-  border-style: solid;
-  border-color: $color-grey;
+  display: flex;
+  border-style: none;
   border-radius: 20px;
   border-width: 1px;
   align-items: center;
@@ -81,17 +79,20 @@ input::placeholder {
   box-shadow: rgba(100, 100, 111, 0.2) 0px 7px 29px 0px;
   &:hover {
     transition: 0.1s;
-    background-color: rgb(221, 201, 243);
+    background-color: rgb(239, 220, 241);
   }
   .element__numbers {
     color: white;
     background-color: $color-primary;
     border: 1px solid $color-primary;
     border-radius: 50%;
+    width: 20px;
+    height: 20px;
+    text-align: center;
   }
   .element__icon {
     margin-right: 20px;
-    color: rgba(192, 192, 192, 0.973);
+    color: $color-grey;
     &:hover {
       transition: 0.1s;
       color: $color-primary;

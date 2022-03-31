@@ -153,9 +153,9 @@ a:visited {
   align-items: center;
   height: 50px;
   margin: 0 auto;
-  background-color: #b5b3b3;
-  border-top: 1px;
-  border-color: #353535;
+  background-color: #EAEAEA;
+  border-top: ridge 2px;
+  border-color: #EAEAEA;
 }
 #intro__search .search__dot {
   margin-right: 10px;
@@ -167,7 +167,7 @@ a:visited {
 #place-search {
   border: none;
   width: 113px;
-  background-color: rgba(201, 200, 200, 0.61);
+  background-color: #EAEAEA;
 }
 
 input::placeholder {
@@ -204,14 +204,12 @@ input::placeholder {
 }
 
 .functioning__list {
-  list-style: none;
-  counter-reset: section;
-  padding-left: 15px;
+  padding: 0px 15px 0px 15px;
 }
 
 .list__element {
-  border-style: solid;
-  border-color: #b5b3b3;
+  display: flex;
+  border-style: none;
   border-radius: 20px;
   border-width: 1px;
   align-items: center;
@@ -221,17 +219,20 @@ input::placeholder {
 }
 .list__element:hover {
   transition: 0.1s;
-  background-color: #ddc9f3;
+  background-color: #efdcf1;
 }
 .list__element .element__numbers {
   color: white;
   background-color: #9356dc;
   border: 1px solid #9356dc;
   border-radius: 50%;
+  width: 20px;
+  height: 20px;
+  text-align: center;
 }
 .list__element .element__icon {
   margin-right: 20px;
-  color: rgba(192, 192, 192, 0.973);
+  color: #b5b3b3;
 }
 .list__element .element__icon:hover {
   transition: 0.1s;
@@ -315,7 +316,16 @@ a:visited {
   color: #008d00;
 }
 .restaurant__card .card__caption {
-  padding: 15px 0px 15px 10px;
+  padding: 15px 10px 15px 10px;
+  display: flex;
+  justify-content: space-between;
+}
+.restaurant__card .card__caption .caption__text .text__title {
+  margin: 0px 0px 5px 0px;
+}
+.restaurant__card .card__caption .caption__text .text__byline {
+  margin: 0;
+  color: grey;
 }
 .restaurant__card .card__title {
   margin: 0px 0px 5px 0px;
@@ -345,7 +355,7 @@ a:visited {
 }
 
 #menu {
-  background-color: #b5b3b3;
+  background-color: #f6f6f6;
   border-top-left-radius: 25px;
   border-top-right-radius: 25px;
   padding: 15px;

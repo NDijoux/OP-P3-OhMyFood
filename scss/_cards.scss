@@ -44,7 +44,18 @@
     color: rgb(0, 141, 0);
   }
   .card__caption {
-    padding: 15px 0px 15px 10px;
+    padding: 15px 10px 15px 10px;
+    display: flex;
+    justify-content: space-between;
+    .caption__text{
+      .text__title{
+        margin: 0px 0px 5px 0px;
+      }
+      .text__byline{
+        margin: 0;
+        color: grey;
+      }
+    }
   }
   .card__title {
     margin: 0px 0px 5px 0px;
