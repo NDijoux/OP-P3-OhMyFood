@@ -4,7 +4,10 @@
     <meta charset="UTF-8" />
     <meta http-equiv="X-UA-Compatible" content="IE=edge" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <link rel="stylesheet" href="./public/css/style.css" />
+    <link
+      rel="stylesheet"
+      href="../DIJOUX_Nathanael_code/public/css/style.css"
+    />
     <link rel="preconnect" href="https://fonts.googleapis.com" />
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
     <link
@@ -62,35 +65,35 @@
 
       <section id="functioning">
         <h2 class="functioning__heading">Fonctionnement</h2>
-        <ul class="functioning__list">
-          <li class="list__element">
-            <div>
-              <i class="fa-solid fa-mobile-screen-button element__icon"></i>
-              <span class="element__byline">Choisissez un restaurant</span>
-            </div>
-          </li>
+        <div class="functioning__list">
+          <div class="list__element">
+            <i class="fa-solid fa-1 element__numbers"></i>
+            <i class="fa-solid fa-mobile-screen-button element__icon"></i>
+            <p class="element__byline">Choisissez un restaurant</p>
+          </div>
 
-          <li class="list__element">
-            <div>
-              <i class="fa-solid fa-list element__icon"></i>
-              <span class="element__byline">Composez votre menu</span>
-            </div>
-          </li>
+          <div class="list__element">
+            <i class="fa-solid fa-2 element__numbers"></i>
+            <i class="fa-solid fa-list element__icon"></i>
+            <p class="element__byline">Composez votre menu</p>
+          </div>
 
-          <li class="list__element">
-            <div>
-              <i class="fa-solid fa-store element__icon"></i>
-              <span class="element__byline">Dégustez au restaurant</span>
-            </div>
-          </li>
-        </ul>
+          <div class="list__element">
+            <i class="fa-solid fa-3 element__numbers"></i>
+            <i class="fa-solid fa-store element__icon"></i>
+            <p class="element__byline">Dégustez au restaurant</p>
+          </div>
+        </div>
       </section>
 
       <section id="restaurant">
         <h2 class="restaurant__heading">Restaurants</h2>
         <div class="restaurant__flex">
           <figure class="restaurant__card">
-            <a href="#" title="La palette du goût">
+            <a
+              href="../DIJOUX_Nathanael_code/menu/lapalettedugout.html"
+              title="La palette du goût"
+            >
               <img
                 class="card__image"
                 src="./images/restaurants/palette.jpg"
@@ -98,15 +101,23 @@
               />
               <button class="card__button">Nouveau</button>
               <figcaption class="card__caption">
-                <h3 class="card__title">La palette du goût</h3>
-                <i class="far fa-heart fa-xl card__like"></i>
-                <p class="card__byline">Ménilmontant</p>
+                <div class="caption__text">
+                  <h3 class="text__title">La palette du goût</h3>
+                  <p class="text__byline">Ménilmontant</p>
+                </div>
+                <div class="caption__heart">
+                  <i class="fal fa-heart heart__empty"></i>
+                  <i class="fas fa-heart heart__full"></i>
+                </div>
               </figcaption>
             </a>
           </figure>
 
           <figure class="restaurant__card">
-            <a href="#" title="La note enchantée">
+            <a
+              href="../DIJOUX_Nathanael_code/menu/lanoteenchantee.html"
+              title="La note enchantée"
+            >
               <img
                 class="card__image"
                 src="./images/restaurants/note.jpg"
@@ -114,39 +125,60 @@
               />
               <button class="card__button">Nouveau</button>
               <figcaption class="card__caption">
-                <h3 class="card__title">La note enchantée</h3>
-                <i class="far fa-heart fa-xl card__like"></i>
-                <p class="card__byline">Charonne</p>
+                <div class="caption__text">
+                  <h3 class="text__title">La note enchantée</h3>
+                  <p class="text__byline">Charonne</p>
+                </div>
+                <div class="caption__heart">
+                  <i class="fal fa-heart heart__empty"></i>
+                  <i class="fas fa-heart heart__full"></i>
+                </div>
               </figcaption>
             </a>
           </figure>
 
           <figure class="restaurant__card">
-            <a href="#" title="A la française">
+            <a
+              href="../DIJOUX_Nathanael_code/menu/alafrancaise.html"
+              title="A la française"
+            >
               <img
                 class="card__image"
                 src="./images/restaurants/française.jpg"
                 alt="restaurant à la française"
               />
               <figcaption class="card__caption">
-                <h3 class="card__title">A la française</h3>
-                <i class="far fa-heart fa-xl card__like"></i>
-                <p class="card__byline">Cité</p>
+                <div class="caption__text">
+                  <h3 class="text__title">A la française</h3>
+                  <p class="text__byline">Cité Rouge</p>
+                </div>
+                <div class="caption__heart">
+                  <i class="fal fa-heart heart__empty"></i>
+                  <i class="fas fa-heart heart__full"></i>
+                </div>
               </figcaption>
             </a>
           </figure>
 
           <figure class="restaurant__card">
-            <a href="#" title="Le délice des sens">
+            <a
+              href="../DIJOUX_Nathanael_code/menu/ledelicedessens.html"
+              title="Le délice des sens"
+            >
               <img
                 class="card__image"
                 src="./images/restaurants/sens.jpg"
                 alt="restaurant le délice des sens"
               />
               <figcaption class="card__caption">
-                <h3 class="card__title">Le délice des sens</h3>
-                <i class="far fa-heart fa-xl card__like"></i>
-                <p class="card__byline">Folie-Méricourt</p>
+                <div class="caption__text">
+                  <h3 class="text__title">Le délice des sens</h3>
+                  <p class="text__byline">Folie-Méricourt</p>
+                </div>
+                <div class="caption__heart">
+                  <i class="fal fa-heart heart__empty"></i>
+                  <i class="fas fa-heart heart__full"></i>
+                </div>
               </figcaption>
             </a>
           </figure>

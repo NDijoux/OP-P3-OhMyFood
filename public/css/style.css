@@ -65,16 +65,19 @@ a:visited {
   color: black;
 }
 
-/* Tablet responsive */
-@media screen and (min-width: 768px) and (max-width: 1023) {
+/* Tablet section */
+@media screen and (min-width: 768px) and (max-width: 1023px) {
   #functioning {
     text-align: center;
     align-items: center;
-    padding: 0px 345px 0px 335px;
+    padding: 0px 145px 0px 135px;
   }
 
+  .list__element {
+    max-width: 750px;
+  }
   .list__element::before {
-    left: 341px;
+    left: 143px;
   }
 
   .restaurant__heading {
@@ -100,6 +103,45 @@ a:visited {
     display: flex;
     justify-content: space-around;
     padding-bottom: 40px;
+    padding-right: 15px;
+  }
+}
+/* Desktop section */
+@media screen and (min-width: 1024px) {
+  #functioning {
+    text-align: center;
+    align-items: center;
+    padding: 0px 345px 0px 335px;
+  }
+
+  .list__element::before {
+    left: 341px;
+  }
+
+  .restaurant__heading {
+    text-align: center;
+  }
+
+  .restaurant__flex {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-around;
+  }
+
+  .restaurant__card {
+    width: 100%;
+    max-width: 600px;
+  }
+
+  .footer__heading {
+    text-align: center;
+  }
+
+  .footer__nav {
+    display: flex;
+    justify-content: space-around;
+    padding-bottom: 40px;
+    padding-right: 15px;
   }
 }
 #intro {
@@ -111,7 +153,9 @@ a:visited {
   align-items: center;
   height: 50px;
   margin: 0 auto;
-  background-color: rgba(192, 192, 192, 0.973);
+  background-color: #b5b3b3;
+  border-top: 1px;
+  border-color: #353535;
 }
 #intro__search .search__dot {
   margin-right: 10px;
@@ -133,7 +177,7 @@ input::placeholder {
 }
 
 .intro__presentation {
-  background-color: #f2f2f2;
+  background-color: #f6f6f6;
   padding: 20px 35px 20px 35px;
   text-align: center;
   align-items: center;
@@ -167,7 +211,7 @@ input::placeholder {
 
 .list__element {
   border-style: solid;
-  border-color: #f2f2f2;
+  border-color: #b5b3b3;
   border-radius: 20px;
   border-width: 1px;
   align-items: center;
@@ -179,19 +223,11 @@ input::placeholder {
   transition: 0.1s;
   background-color: #ddc9f3;
 }
-.list__element::before {
-  counter-increment: section;
-  content: counter(section);
-  text-align: center;
-  display: inline-block;
+.list__element .element__numbers {
   color: white;
   background-color: #9356dc;
   border: 1px solid #9356dc;
   border-radius: 50%;
-  height: 17px;
-  width: 17px;
-  position: absolute;
-  left: 7px;
 }
 .list__element .element__icon {
   margin-right: 20px;
@@ -235,7 +271,7 @@ a:visited {
 }
 
 #restaurant {
-  background-color: #f2f2f2;
+  background-color: #f6f6f6;
   padding: 20px 15px 40px 15px;
   margin: 40px 0px 0px 0px;
 }
@@ -304,13 +340,12 @@ a:visited {
 }
 .background .background__image {
   width: 100%;
-  max-width: 390px;
   height: 190px;
   object-fit: cover;
 }
 
 #menu {
-  background-color: #f2f2f2;
+  background-color: #b5b3b3;
   border-top-left-radius: 25px;
   border-top-right-radius: 25px;
   padding: 15px;
@@ -367,7 +402,7 @@ footer .footer__heading {
 }
 footer .footer__nav {
   list-style: none;
-  padding: 0px 0px 0px 15px;
+  padding-left: 15px;
   margin: 16px 0px 0px 0px;
 }
 footer .footer__nav .nav__link {
@@ -380,16 +415,19 @@ footer .footer__nav .nav__link .link__mail {
   color: white;
 }
 
-/* Tablet responsive */
-@media screen and (min-width: 768px) and (max-width: 1023) {
+/* Tablet section */
+@media screen and (min-width: 768px) and (max-width: 1023px) {
   #functioning {
     text-align: center;
     align-items: center;
-    padding: 0px 345px 0px 335px;
+    padding: 0px 145px 0px 135px;
   }
 
+  .list__element {
+    max-width: 750px;
+  }
   .list__element::before {
-    left: 341px;
+    left: 143px;
   }
 
   .restaurant__heading {
@@ -415,6 +453,45 @@ footer .footer__nav .nav__link .link__mail {
     display: flex;
     justify-content: space-around;
     padding-bottom: 40px;
+    padding-right: 15px;
+  }
+}
+/* Desktop section */
+@media screen and (min-width: 1024px) {
+  #functioning {
+    text-align: center;
+    align-items: center;
+    padding: 0px 345px 0px 335px;
+  }
+
+  .list__element::before {
+    left: 341px;
+  }
+
+  .restaurant__heading {
+    text-align: center;
+  }
+
+  .restaurant__flex {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-around;
+  }
+
+  .restaurant__card {
+    width: 100%;
+    max-width: 600px;
+  }
+
+  .footer__heading {
+    text-align: center;
+  }
+
+  .footer__nav {
+    display: flex;
+    justify-content: space-around;
+    padding-bottom: 40px;
+    padding-right: 15px;
   }
 }
 

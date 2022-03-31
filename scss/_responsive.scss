@@ -1,12 +1,15 @@
-/* Tablet responsive */
-@media screen and (min-width: 768px) and (max-width: 1023) {
+/* Tablet section */
+@media screen and (min-width: 768px) and (max-width: 1023px) {
   #functioning {
     text-align: center;
     align-items: center;
-    padding: 0px 345px 0px 335px;
+    padding: 0px 145px 0px 135px;
   }
-  .list__element::before {
-    left: 341px;
+  .list__element {
+    max-width: 750px;
+    &::before {
+      left: 143px;
+    }
   }
 
   .restaurant__heading {
@@ -32,5 +35,44 @@
     display: flex;
     justify-content: space-around;
     padding-bottom: 40px;
+    padding-right: 15px;
+  }
+}
+
+/* Desktop section */
+@media screen and (min-width: 1024px) {
+  #functioning {
+    text-align: center;
+    align-items: center;
+    padding: 0px 345px 0px 335px;
+  }
+  .list__element::before {
+    left: 341px;
+  }
+
+  .restaurant__heading {
+    text-align: center;
+  }
+
+  .restaurant__flex {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-around;
+  }
+
+  .restaurant__card {
+    width: 100%;
+    max-width: 600px;
+  }
+
+  .footer__heading {
+    text-align: center;
+  }
+
+  .footer__nav {
+    display: flex;
+    justify-content: space-around;
+    padding-bottom: 40px;
+    padding-right: 15px;
   }
 }

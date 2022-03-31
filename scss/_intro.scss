@@ -1,5 +1,5 @@
-@import "./variables";
-@import "./responsive";
+@import "../scss/variables";
+@import "../scss/responsive";
 
 #intro {
   margin-top: 20px;
@@ -10,7 +10,9 @@
   align-items: center;
   height: 50px;
   margin: 0 auto;
-  background-color: rgba(192, 192, 192, 0.973);
+  background-color: $color-grey;
+  border-top: 1px;
+  border-color: $color-dark-grey;
   .search__dot {
     margin-right: 10px;
   }
@@ -32,7 +34,7 @@ input::placeholder {
 }
 
 .intro__presentation {
-  background-color: $color-grey;
+  background-color: $color-light-grey;
   padding: 20px 35px 20px 35px;
   text-align: center;
   align-items: center;
@@ -81,19 +83,11 @@ input::placeholder {
     transition: 0.1s;
     background-color: rgb(221, 201, 243);
   }
-  &::before {
-    counter-increment: section;
-    content: counter(section);
-    text-align: center;
-    display: inline-block;
+  .element__numbers {
     color: white;
     background-color: $color-primary;
     border: 1px solid $color-primary;
     border-radius: 50%;
-    height: 17px;
-    width: 17px;
-    position: absolute;
-    left: 7px;
   }
   .element__icon {
     margin-right: 20px;
