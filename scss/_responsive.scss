@@ -3,12 +3,16 @@
   #functioning {
     text-align: center;
     align-items: center;
-    padding: 0px 145px 0px 135px;
   }
-  .list__element {
+
+  .functioning__list{
     display: flex;
-    flex-wrap: wrap;
-    max-width: 345px;
+    justify-content: space-around;
+  }
+
+  .list__element {
+    padding-right: 10px;
+    min-width: 230px;
   }
 
   .restaurant__heading {
@@ -43,12 +47,15 @@
   #functioning {
     text-align: center;
     align-items: center;
-    padding: 0px 345px 0px 335px;
   }
-  .list__element {
+
+  .functioning__list{
     display: flex;
-    flex-wrap: wrap;
-    max-width: 345px;
+    justify-content: space-around;
+  }
+
+  .list__element {
+    min-width: 315px;
   }
 
   .restaurant__heading {
@@ -64,6 +71,22 @@
   .restaurant__card {
     width: 100%;
     max-width: 600px;
+  }
+
+  .menu__title{
+    justify-content: center;
+    .title__heart{
+      margin-left: 20px;
+    }
+  }
+
+  #menu__flex{
+    display: flex;
+    justify-content: space-around;
+  }
+
+  .menu__compo {
+    width: 320px;
   }
 
   .footer__heading {

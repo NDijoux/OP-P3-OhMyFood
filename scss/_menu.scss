@@ -47,23 +47,45 @@
     display: flex;
     justify-content: space-between;
     border-radius: 15px;
-    padding: 10px 20px 10px 10px;
+    padding: 10px 0px 10px 10px;
     margin-bottom: 15px;
     background-color: white;
     overflow: hidden;
     box-shadow: rgba(100, 100, 111, 0.2) 0px 7px 29px 0px;
     .byline__detail{
+      max-width: 270px;
       .detail__title{
         margin: 10px 0px 5px 0px;
       }
       .detail__text{
         margin: 5px 0px 10px 0px;
         color: $color-dark-grey;
+        width: 250px;
+        white-space: nowrap;
+        overflow: hidden;
+       text-overflow: ellipsis;
       }
     }
     .byline__price{
-      margin: 47px 0px 0px 0px;
+      margin: 39px 0px 0px 0px;
+      padding: 0px 20px 0px 0px;
     }
+  }
+  .compo__flex{
+    display:flex;
+    flex-direction:row;
+  }
+  .compo__green{
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    color: white;
+    background-color: $color-tertiary;
+    width: 50px;
+    height: 87px;
+    border-top-right-radius: 15px;
+    border-bottom-right-radius: 15px;
+    margin-left: -11px;
   }
 }
 
