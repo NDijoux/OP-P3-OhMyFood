@@ -57,21 +57,19 @@
       }
     }
   }
-  .card__title {
-    margin: 0px 0px 5px 0px;
-  }
-  .card__byline {
-    margin: 0;
-    margin-top: -2px;
-    color: grey;
-  }
-  .card__like {
-    display: flex;
-    justify-content: right;
-    padding-right: 25px;
-    &:hover {
-      transition: 0.1s;
-      color: rgb(255, 121, 218);
+  .caption__heart{
+    .heart__empty{
+      margin-right: -20px;
+      &:hover{
+        opacity: 0;
+      }
+    }
+    .heart__full{
+      color: $color-secondary;
+      opacity: 0;
+      &:hover{
+        opacity: 1;
+      }
     }
   }
 }

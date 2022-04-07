@@ -36,6 +36,9 @@ header .heading__logo {
   width: 170px;
   height: 30px;
 }
+header .header__home {
+  margin: 0px 0px -25px 25px;
+}
 
 /* Colors */
 /* Reset */
@@ -74,10 +77,9 @@ a:visited {
   }
 
   .list__element {
-    max-width: 750px;
-  }
-  .list__element::before {
-    left: 143px;
+    display: flex;
+    flex-wrap: wrap;
+    max-width: 345px;
   }
 
   .restaurant__heading {
@@ -114,8 +116,10 @@ a:visited {
     padding: 0px 345px 0px 335px;
   }
 
-  .list__element::before {
-    left: 341px;
+  .list__element {
+    display: flex;
+    flex-wrap: wrap;
+    max-width: 345px;
   }
 
   .restaurant__heading {
@@ -150,6 +154,7 @@ a:visited {
 
 #intro__search {
   display: flex;
+  justify-content: center;
   align-items: center;
   height: 50px;
   margin: 0 auto;
@@ -213,33 +218,35 @@ input::placeholder {
   border-radius: 20px;
   border-width: 1px;
   align-items: center;
-  padding: 20px 0px 20px 30px;
+  padding: 15px 0px 15px 0px;
   margin-top: 20px;
   box-shadow: rgba(100, 100, 111, 0.2) 0px 7px 29px 0px;
 }
 .list__element:hover {
   transition: 0.1s;
-  background-color: #efdcf1;
+  background-color: #f5edff;
+}
+.list__element:hover .element__icon {
+  transition: 0.1s;
+  color: #9356dc;
 }
 .list__element .element__numbers {
+  font-size: 14px;
   color: white;
   background-color: #9356dc;
   border: 1px solid #9356dc;
   border-radius: 50%;
-  width: 20px;
-  height: 20px;
+  width: 19px;
+  height: 19px;
   text-align: center;
+  margin: 0px 10px 0px -10px;
 }
 .list__element .element__icon {
-  margin-right: 20px;
+  margin: 0px 20px 0px 15px;
   color: #b5b3b3;
 }
-.list__element .element__icon:hover {
-  transition: 0.1s;
-  color: #9356dc;
-}
 .list__element .element__byline {
-  font-size: 18px;
+  font-size: 15px;
   font-weight: bold;
 }
 
@@ -327,22 +334,18 @@ a:visited {
   margin: 0;
   color: grey;
 }
-.restaurant__card .card__title {
-  margin: 0px 0px 5px 0px;
+.restaurant__card .caption__heart .heart__empty {
+  margin-right: -20px;
 }
-.restaurant__card .card__byline {
-  margin: 0;
-  margin-top: -2px;
-  color: grey;
+.restaurant__card .caption__heart .heart__empty:hover {
+  opacity: 0;
 }
-.restaurant__card .card__like {
-  display: flex;
-  justify-content: right;
-  padding-right: 25px;
-}
-.restaurant__card .card__like:hover {
-  transition: 0.1s;
+.restaurant__card .caption__heart .heart__full {
   color: #ff79da;
+  opacity: 0;
+}
+.restaurant__card .caption__heart .heart__full:hover {
+  opacity: 1;
 }
 
 .background {
@@ -361,6 +364,7 @@ a:visited {
   padding: 15px;
   margin-top: -50px;
   position: relative;
+  cursor: pointer;
 }
 
 .menu__title {
@@ -368,11 +372,27 @@ a:visited {
   justify-content: space-between;
   align-items: center;
 }
+.menu__title .title__heart .heart__empty {
+  margin-right: -20px;
+}
+.menu__title .title__heart .heart__empty:hover {
+  opacity: 0;
+}
+.menu__title .title__heart .heart__full {
+  color: #ff79da;
+  opacity: 0;
+}
+.menu__title .title__heart .heart__full:hover {
+  opacity: 1;
+}
 
 .menu__compo .compo__title {
   font-weight: 400;
+  border-bottom: 3px solid #99e2d0;
 }
 .menu__compo .compo__byline {
+  display: flex;
+  justify-content: space-between;
   border-radius: 15px;
   padding: 10px 20px 10px 10px;
   margin-bottom: 15px;
@@ -380,9 +400,15 @@ a:visited {
   overflow: hidden;
   box-shadow: rgba(100, 100, 111, 0.2) 0px 7px 29px 0px;
 }
-.menu__compo .compo__byline .byline__detail {
-  display: flex;
-  justify-content: space-between;
+.menu__compo .compo__byline .byline__detail .detail__title {
+  margin: 10px 0px 5px 0px;
+}
+.menu__compo .compo__byline .byline__detail .detail__text {
+  margin: 5px 0px 10px 0px;
+  color: #353535;
+}
+.menu__compo .compo__byline .byline__price {
+  margin: 47px 0px 0px 0px;
 }
 
 .order {
@@ -434,10 +460,9 @@ footer .footer__nav .nav__link .link__mail {
   }
 
   .list__element {
-    max-width: 750px;
-  }
-  .list__element::before {
-    left: 143px;
+    display: flex;
+    flex-wrap: wrap;
+    max-width: 345px;
   }
 
   .restaurant__heading {
@@ -474,8 +499,10 @@ footer .footer__nav .nav__link .link__mail {
     padding: 0px 345px 0px 335px;
   }
 
-  .list__element::before {
-    left: 341px;
+  .list__element {
+    display: flex;
+    flex-wrap: wrap;
+    max-width: 345px;
   }
 
   .restaurant__heading {

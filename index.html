@@ -4,10 +4,7 @@
     <meta charset="UTF-8" />
     <meta http-equiv="X-UA-Compatible" content="IE=edge" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <link
-      rel="stylesheet"
-      href="../DIJOUX_Nathanael_code/public/css/style.css"
-    />
+    <link rel="stylesheet" href="./public/css/style.css" />
     <link rel="preconnect" href="https://fonts.googleapis.com" />
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
     <link
@@ -36,22 +33,16 @@
 
     <main>
       <section id="intro">
-        <div id="intro__search">
-          <div class="search__dot">
-            <span class="fas fa-location-dot"></span>
-          </div>
-          <form>
-            <div class="search">
-              <label for="place-search"></label>
-              <input
-                type="search"
-                id="place-search"
-                name="place-search"
-                placeholder="Paris, Belleville"
-              />
-            </div>
-          </form>
-        </div>
+        <form id="intro__search">
+          <i class="fas fa-location-dot search__dot"></i>
+          <label for="place-search"></label>
+          <input
+            type="search"
+            id="place-search"
+            name="place-search"
+            placeholder="Paris, Belleville"
+          />
+        </form>
         <div class="intro__presentation">
           <h1 class="presentation__heading">
             Réservez le menu qui vous convient
@@ -67,19 +58,19 @@
         <h2 class="functioning__heading">Fonctionnement</h2>
         <div class="functioning__list">
           <div class="list__element">
-            <i class="fa-solid fa-1 element__numbers"></i>
+            <span class="element__numbers">1</span>
             <i class="fa-solid fa-mobile-screen-button element__icon"></i>
             <p class="element__byline">Choisissez un restaurant</p>
           </div>
 
           <div class="list__element">
-            <i class="fa-solid fa-2 element__numbers"></i>
+            <span class="element__numbers">2</span>
             <i class="fa-solid fa-list element__icon"></i>
             <p class="element__byline">Composez votre menu</p>
           </div>
 
           <div class="list__element">
-            <i class="fa-solid fa-3 element__numbers"></i>
+            <span class="element__numbers">3</span>
             <i class="fa-solid fa-store element__icon"></i>
             <p class="element__byline">Dégustez au restaurant</p>
           </div>
@@ -90,10 +81,7 @@
         <h2 class="restaurant__heading">Restaurants</h2>
         <div class="restaurant__flex">
           <figure class="restaurant__card">
-            <a
-              href="../DIJOUX_Nathanael_code/menu/lapalettedugout.html"
-              title="La palette du goût"
-            >
+            <a href="./menu/lapalettedugout.html" title="La palette du goût">
               <img
                 class="card__image"
                 src="./images/restaurants/palette.jpg"
@@ -105,17 +93,18 @@
                   <h3 class="text__title">La palette du goût</h3>
                   <p class="text__byline">Ménilmontant</p>
                 </div>
+              </a>
                 <div class="caption__heart">
                   <i class="far fa-heart heart__empty"></i>
                   <i class="fas fa-heart heart__full"></i>
                 </div>
               </figcaption>
-            </a>
+            
           </figure>
 
           <figure class="restaurant__card">
             <a
-              href="../DIJOUX_Nathanael_code/menu/lanoteenchantee.html"
+              href="./menu/lanoteenchantee.html"
               title="La note enchantée"
             >
               <img
@@ -129,17 +118,17 @@
                   <h3 class="text__title">La note enchantée</h3>
                   <p class="text__byline">Charonne</p>
                 </div>
+              </a>
                 <div class="caption__heart">
                   <i class="far fa-heart heart__empty"></i>
                   <i class="fas fa-heart heart__full"></i>
                 </div>
               </figcaption>
-            </a>
           </figure>
 
           <figure class="restaurant__card">
             <a
-              href="../DIJOUX_Nathanael_code/menu/alafrancaise.html"
+              href="./menu/alafrancaise.html"
               title="A la française"
             >
               <img
@@ -152,17 +141,17 @@
                   <h3 class="text__title">A la française</h3>
                   <p class="text__byline">Cité Rouge</p>
                 </div>
+              </a>
                 <div class="caption__heart">
                   <i class="far fa-heart heart__empty"></i>
                   <i class="fas fa-heart heart__full"></i>
                 </div>
               </figcaption>
-            </a>
           </figure>
 
           <figure class="restaurant__card">
             <a
-              href="../DIJOUX_Nathanael_code/menu/ledelicedessens.html"
+              href="./menu/ledelicedessens.html"
               title="Le délice des sens"
             >
               <img
@@ -175,12 +164,12 @@
                   <h3 class="text__title">Le délice des sens</h3>
                   <p class="text__byline">Folie-Méricourt</p>
                 </div>
+              </a>
                 <div class="caption__heart">
                   <i class="far fa-heart heart__empty"></i>
                   <i class="fas fa-heart heart__full"></i>
                 </div>
               </figcaption>
-            </a>
           </figure>
         </div>
       </section>

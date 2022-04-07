@@ -6,10 +6,9 @@
     padding: 0px 145px 0px 135px;
   }
   .list__element {
-    max-width: 750px;
-    &::before {
-      left: 143px;
-    }
+    display: flex;
+    flex-wrap: wrap;
+    max-width: 345px;
   }
 
   .restaurant__heading {
@@ -46,8 +45,10 @@
     align-items: center;
     padding: 0px 345px 0px 335px;
   }
-  .list__element::before {
-    left: 341px;
+  .list__element {
+    display: flex;
+    flex-wrap: wrap;
+    max-width: 345px;
   }
 
   .restaurant__heading {

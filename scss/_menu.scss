@@ -14,28 +14,55 @@
   padding: 15px;
   margin-top: -50px;
   position: relative;
+  cursor: pointer;
 }
 
 .menu__title {
   display: flex;
   justify-content: space-between;
   align-items: center;
+  .title__heart{
+    .heart__empty{
+      margin-right: -20px;
+      &:hover{
+        opacity: 0;
+      }
+    }
+    .heart__full{
+      color: $color-secondary;
+      opacity: 0;
+      &:hover{
+        opacity: 1;
+      }
+    }
+  }
 }
 
 .menu__compo {
   .compo__title {
     font-weight: 400;
+    border-bottom: 3px solid $color-tertiary;
   }
   .compo__byline {
+    display: flex;
+    justify-content: space-between;
     border-radius: 15px;
     padding: 10px 20px 10px 10px;
     margin-bottom: 15px;
     background-color: white;
     overflow: hidden;
     box-shadow: rgba(100, 100, 111, 0.2) 0px 7px 29px 0px;
-    .byline__detail {
-      display: flex;
-      justify-content: space-between;
+    .byline__detail{
+      .detail__title{
+        margin: 10px 0px 5px 0px;
+      }
+      .detail__text{
+        margin: 5px 0px 10px 0px;
+        color: $color-dark-grey;
+      }
+    }
+    .byline__price{
+      margin: 47px 0px 0px 0px;
     }
   }
 }

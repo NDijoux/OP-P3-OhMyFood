@@ -1,5 +1,5 @@
-@import "../scss/variables";
-@import "../scss/responsive";
+@import "./variables";
+@import "./responsive";
 
 #intro {
   margin-top: 20px;
@@ -7,6 +7,7 @@
 
 #intro__search {
   display: flex;
+  justify-content: center;
   align-items: center;
   height: 50px;
   margin: 0 auto;
@@ -74,32 +75,35 @@ padding: 0px 15px 0px 15px;
   border-radius: 20px;
   border-width: 1px;
   align-items: center;
-  padding: 20px 0px 20px 30px;
+  padding: 15px 0px 15px 0px;
   margin-top: 20px;
   box-shadow: rgba(100, 100, 111, 0.2) 0px 7px 29px 0px;
   &:hover {
     transition: 0.1s;
-    background-color: rgb(239, 220, 241);
+    background-color: #f5edff;
+  }
+  &:hover .element__icon {
+    transition: 0.1s;
+    color: $color-primary;
   }
   .element__numbers {
+    font-size: 14px;
     color: white;
     background-color: $color-primary;
     border: 1px solid $color-primary;
     border-radius: 50%;
-    width: 20px;
-    height: 20px;
+    width: 19px;
+    height: 19px;
     text-align: center;
+    margin: 0px 10px 0px -10px;
+    
   }
   .element__icon {
-    margin-right: 20px;
+    margin: 0px 20px 0px 15px;
     color: $color-grey;
-    &:hover {
-      transition: 0.1s;
-      color: $color-primary;
-    }
   }
   .element__byline {
-    font-size: 18px;
+    font-size: 15px;
     font-weight: bold;
   }
 }
