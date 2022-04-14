@@ -1,3 +1,5 @@
+@import "./variables";
+
 .background {
   margin: 10px 0px 0px 0px;
   .background__image {
@@ -29,7 +31,9 @@
       }
     }
     .heart__full{
-      color: $color-secondary;
+      background: -webkit-gradient(linear, left top, left bottom, from(#9356dc), to(#ff79da));
+	    -webkit-background-clip: text;
+	    -webkit-text-fill-color: transparent;
       opacity: 0;
       &:hover{
         opacity: 1;
@@ -41,19 +45,26 @@
 .menu__compo {
   .compo__title {
     font-weight: 400;
-    border-bottom: 3px solid $color-tertiary;
+    &:after{
+      content: "";
+      display: block;
+      width: 65px;
+      padding-top: 10px;
+      border-bottom: 2px solid $color-tertiary ;
+    }
   }
   .compo__byline {
     display: flex;
     justify-content: space-between;
+    width: 100%;
     border-radius: 15px;
-    padding: 10px 0px 10px 10px;
     margin-bottom: 15px;
     background-color: white;
     overflow: hidden;
     box-shadow: rgba(100, 100, 111, 0.2) 0px 7px 29px 0px;
     .byline__detail{
       max-width: 270px;
+      padding: 0px 0px 0px 10px;
       .detail__title{
         margin: 10px 0px 5px 0px;
       }
@@ -66,27 +77,34 @@
        text-overflow: ellipsis;
       }
     }
-    .byline__price{
+    .byline__anim{
+    display: flex;
+      .anim__price{
       margin: 39px 0px 0px 0px;
       padding: 0px 20px 0px 0px;
+      }
+      .anim__green{
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      color: white;
+      background-color: $color-tertiary;
+      width: 50px;
+      height: 67px;
+      border-top-right-radius: 14px;
+      border-bottom-right-radius: 14px;
+      margin-right: -52px;
+      }
     }
   }
   .compo__flex{
     display:flex;
     flex-direction:row;
   }
-  .compo__green{
-    display: flex;
-    align-items: center;
-    justify-content: center;
-    color: white;
-    background-color: $color-tertiary;
-    width: 50px;
-    height: 87px;
-    border-top-right-radius: 15px;
-    border-bottom-right-radius: 15px;
-    margin-left: -11px;
-  }
+}
+
+.byline__anim:hover{
+  margin-left: -11px;
 }
 
 .order {

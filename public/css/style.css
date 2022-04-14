@@ -303,6 +303,7 @@ a:visited {
   background-color: #f6f6f6;
   padding: 20px 15px 40px 15px;
   margin: 40px 0px 0px 0px;
+  cursor: pointer;
 }
 
 .restaurant__button {
@@ -362,11 +363,41 @@ a:visited {
   opacity: 0;
 }
 .restaurant__card .caption__heart .heart__full {
-  color: #ff79da;
+  background: -webkit-gradient(linear, left top, left bottom, from(#9356dc), to(#ff79da));
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
   opacity: 0;
 }
 .restaurant__card .caption__heart .heart__full:hover {
   opacity: 1;
+}
+
+/* Colors */
+/* Reset */
+body {
+  margin: 0px;
+  font-family: "Roboto", sans-serif;
+  max-width: 1400px;
+  margin: 0 auto;
+}
+
+.title__heading,
+.footer__heading {
+  font-family: "Shrikhand", cursive;
+}
+
+#place-search {
+  padding: 0;
+}
+
+h1 {
+  margin: 0;
+}
+
+a:link,
+a:visited {
+  text-decoration: none;
+  color: black;
 }
 
 .background {
@@ -400,7 +431,9 @@ a:visited {
   opacity: 0;
 }
 .menu__title .title__heart .heart__full {
-  color: #ff79da;
+  background: -webkit-gradient(linear, left top, left bottom, from(#9356dc), to(#ff79da));
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
   opacity: 0;
 }
 .menu__title .title__heart .heart__full:hover {
@@ -409,13 +442,19 @@ a:visited {
 
 .menu__compo .compo__title {
   font-weight: 400;
-  border-bottom: 3px solid #99e2d0;
+}
+.menu__compo .compo__title:after {
+  content: "";
+  display: block;
+  width: 65px;
+  padding-top: 10px;
+  border-bottom: 2px solid #99e2d0;
 }
 .menu__compo .compo__byline {
   display: flex;
   justify-content: space-between;
+  width: 100%;
   border-radius: 15px;
-  padding: 10px 0px 10px 10px;
   margin-bottom: 15px;
   background-color: white;
   overflow: hidden;
@@ -423,6 +462,7 @@ a:visited {
 }
 .menu__compo .compo__byline .byline__detail {
   max-width: 270px;
+  padding: 0px 0px 0px 10px;
 }
 .menu__compo .compo__byline .byline__detail .detail__title {
   margin: 10px 0px 5px 0px;
@@ -435,24 +475,31 @@ a:visited {
   overflow: hidden;
   text-overflow: ellipsis;
 }
-.menu__compo .compo__byline .byline__price {
+.menu__compo .compo__byline .byline__anim {
+  display: flex;
+}
+.menu__compo .compo__byline .byline__anim .anim__price {
   margin: 39px 0px 0px 0px;
   padding: 0px 20px 0px 0px;
 }
-.menu__compo .compo__flex {
-  display: flex;
-  flex-direction: row;
-}
-.menu__compo .compo__green {
+.menu__compo .compo__byline .byline__anim .anim__green {
   display: flex;
   align-items: center;
   justify-content: center;
   color: white;
   background-color: #99e2d0;
   width: 50px;
-  height: 87px;
-  border-top-right-radius: 15px;
-  border-bottom-right-radius: 15px;
+  height: 67px;
+  border-top-right-radius: 14px;
+  border-bottom-right-radius: 14px;
+  margin-right: -52px;
+}
+.menu__compo .compo__flex {
+  display: flex;
+  flex-direction: row;
+}
+
+.byline__anim:hover {
   margin-left: -11px;
 }
 
