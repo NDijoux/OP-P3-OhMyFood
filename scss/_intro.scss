@@ -1,6 +1,8 @@
 @import "./variables";
 @import "./responsive";
 
+
+
 #intro {
   margin-top: 20px;
 }
@@ -46,27 +48,40 @@ input::placeholder {
     color: grey;
   }
   .presentation__button {
-    background: rgb(255, 121, 218);
-    background: linear-gradient(
-      90deg,
-      rgba(255, 121, 218, 1) 0%,
-      rgba(147, 86, 220, 1) 100%
-    );
+    background-image: linear-gradient(
+  355deg,
+  hsl(267deg 66% 60%) 0%,
+  hsl(273deg 65% 61%) 11%,
+  hsl(279deg 65% 61%) 22%,
+  hsl(285deg 64% 62%) 33%,
+  hsl(291deg 63% 62%) 44%,
+  hsl(297deg 62% 63%) 56%,
+  hsl(303deg 66% 65%) 67%,
+  hsl(308deg 76% 68%) 78%,
+  hsl(312deg 87% 71%) 89%,
+  hsl(317deg 100% 74%) 100%
+);
     border: none;
     color: white;
     padding: 15px;
     border-radius: 25px;
     font-size: 16px;
     box-shadow: rgba(100, 100, 111, 0.2) 0px 7px 29px 0px;
+    cursor: pointer;
+    &:hover {
+      filter: brightness(110%);
+      transition: .3s;
+      box-shadow: rgba(0, 0, 0, 0.25) 0px 14px 28px, rgba(0, 0, 0, 0.22) 0px 10px 10px;
+    }
   }
 }
 
 .functioning__heading {
   margin-left: 15px;
 }
-
 .functioning__list {
-padding: 0px 15px 0px 15px;
+  cursor: pointer;
+  padding: 0px 15px 0px 15px;
 }
 
 .list__element {
@@ -87,6 +102,9 @@ padding: 0px 15px 0px 15px;
     color: $color-primary;
   }
   .element__numbers {
+    display: flex;
+    justify-content: center;
+    align-items: center;
     font-size: 14px;
     color: white;
     background-color: $color-primary;
@@ -94,7 +112,6 @@ padding: 0px 15px 0px 15px;
     border-radius: 50%;
     width: 19px;
     height: 19px;
-    text-align: center;
     margin: 0px 10px 0px -10px;
     
   }

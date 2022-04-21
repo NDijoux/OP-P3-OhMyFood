@@ -61,9 +61,6 @@
   .caption__heart{
     .heart__empty{
       margin-right: -20px;
-      &:hover{
-        opacity: 0;
-      }
     }
     .heart__full{
       background: -webkit-gradient(linear, left top, left bottom, from(#9356dc), to(#ff79da));
@@ -71,6 +68,7 @@
 	    -webkit-text-fill-color: transparent;
       opacity: 0;
       &:hover{
+        transition: 2s;
         opacity: 1;
       }
     }

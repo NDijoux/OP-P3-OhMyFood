@@ -26,9 +26,6 @@
   .title__heart{
     .heart__empty{
       margin-right: -20px;
-      &:hover{
-        opacity: 0;
-      }
     }
     .heart__full{
       background: -webkit-gradient(linear, left top, left bottom, from(#9356dc), to(#ff79da));
@@ -36,6 +33,7 @@
 	    -webkit-text-fill-color: transparent;
       opacity: 0;
       &:hover{
+        transition: 2s;
         opacity: 1;
       }
     }
@@ -63,22 +61,24 @@
     overflow: hidden;
     box-shadow: rgba(100, 100, 111, 0.2) 0px 7px 29px 0px;
     .byline__detail{
-      max-width: 270px;
+      max-width: 65%;
       padding: 0px 0px 0px 10px;
       .detail__title{
         margin: 10px 0px 5px 0px;
+        white-space: nowrap;
+        overflow: hidden;
+       text-overflow: ellipsis;
       }
       .detail__text{
         margin: 5px 0px 10px 0px;
         color: $color-dark-grey;
-        width: 250px;
         white-space: nowrap;
         overflow: hidden;
        text-overflow: ellipsis;
       }
     }
     .byline__anim{
-    display: flex;
+      display: flex;
       .anim__price{
       margin: 39px 0px 0px 0px;
       padding: 0px 20px 0px 0px;
@@ -112,17 +112,60 @@
   text-align: center;
   align-items: center;
   .order__button {
-    background: rgb(255, 121, 218);
-    background: linear-gradient(
-      90deg,
-      rgba(255, 121, 218, 1) 0%,
-      rgba(147, 86, 220, 1) 100%
-    );
+    background-image: linear-gradient(
+  355deg,
+  hsl(267deg 66% 60%) 0%,
+  hsl(273deg 65% 61%) 11%,
+  hsl(279deg 65% 61%) 22%,
+  hsl(285deg 64% 62%) 33%,
+  hsl(291deg 63% 62%) 44%,
+  hsl(297deg 62% 63%) 56%,
+  hsl(303deg 66% 65%) 67%,
+  hsl(308deg 76% 68%) 78%,
+  hsl(312deg 87% 71%) 89%,
+  hsl(317deg 100% 74%) 100%
+);
     border: none;
     color: white;
+    width: 196.31px;
     padding: 15px;
     border-radius: 25px;
     font-size: 16px;
     box-shadow: rgba(100, 100, 111, 0.2) 0px 7px 29px 0px;
+    &:hover {
+      filter: brightness(110%);
+      transition: .3s;
+      box-shadow: rgba(0, 0, 0, 0.25) 0px 14px 28px, rgba(0, 0, 0, 0.22) 0px 10px 10px;
+    }
+  } 
+}
+
+/* Animation Section */
+
+.byline__anim{
+    transition: all 400ms linear;
+    &:hover{
+    transform: translate(-52px,0);
+      i {
+      transform: rotate(360deg);
+      transition: transform 400ms ease-in-out;
+      }
+    }
   }
+
+@keyframes menu-animation {
+  from {
+    opacity: 0;
+    transform: translate(0,20px);
+  }
+
+  to {
+    opacity: 1;
+    transform: translate(0,0);
+  }
+}
+
+
+.menu__compo{
+  animation: menu-animation 2s;
 }
