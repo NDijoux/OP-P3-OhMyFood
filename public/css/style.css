@@ -221,7 +221,7 @@ input::placeholder {
   padding: 15px;
   border-radius: 25px;
   font-size: 16px;
-  box-shadow: rgba(100, 100, 111, 0.2) 0px 7px 29px 0px;
+  box-shadow: rgba(0, 0, 0, 0.19) 0px 10px 20px, rgba(0, 0, 0, 0.23) 0px 6px 6px;
   cursor: pointer;
 }
 .intro__presentation .presentation__button:hover {
@@ -279,6 +279,73 @@ input::placeholder {
   font-weight: bold;
 }
 
+/* Animation Section */
+#page {
+  animation: load-hide 3s ease-in-out forwards;
+}
+
+@keyframes load-hide {
+  from {
+    opacity: 0;
+  }
+  to {
+    opacity: 1;
+  }
+}
+.wrapper__spinner {
+  width: 100%;
+  height: 100%;
+  position: absolute;
+  top: 0;
+  left: 0;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  animation: wrapper-sinner 3 forwards;
+}
+
+@keyframes wrapper-spinner {
+  from {
+    opacity: 1;
+  }
+  to {
+    opacity: 0;
+  }
+}
+.spinner {
+  width: 156px;
+  height: 156px;
+  display: grid;
+  animation: spinner-plncf9 3s forwards;
+}
+
+.spinner::before,
+.spinner::after {
+  content: "";
+  grid-area: 1/1;
+  border: 9px solid;
+  border-radius: 50%;
+  border-color: #9356dc #9356dc #0000 #0000;
+  mix-blend-mode: darken;
+  animation: spinner-plncf9 3s linear forwards;
+}
+
+.spinner::after {
+  border-color: #0000 #0000 #ff79da #ff79da;
+  animation-direction: reverse;
+}
+
+@keyframes spinner-plncf9 {
+  100% {
+    transform: rotate(1turn);
+  }
+  from {
+    opacity: 1;
+  }
+  to {
+    opacity: 0;
+  }
+}
 /* Colors */
 /* Reset */
 body {
@@ -340,7 +407,7 @@ a:visited {
   border-top-right-radius: 15px;
   object-fit: cover;
 }
-.restaurant__card .card__button {
+.restaurant__card .card__new {
   position: absolute;
   top: 5%;
   left: 72%;
@@ -378,6 +445,19 @@ a:visited {
   opacity: 1;
 }
 
+/* Animation Section */
+.restaurant__card {
+  animation: load-hide 3s ease-in-out forwards;
+}
+
+@keyframes load-hide {
+  from {
+    opacity: 0;
+  }
+  to {
+    opacity: 1;
+  }
+}
 /* Colors */
 /* Reset */
 body {
@@ -465,8 +545,9 @@ a:visited {
   box-shadow: rgba(100, 100, 111, 0.2) 0px 7px 29px 0px;
 }
 .menu__compo .compo__byline .byline__detail {
-  max-width: 65%;
+  max-width: 70%;
   padding: 0px 0px 0px 10px;
+  min-width: 0;
 }
 .menu__compo .compo__byline .byline__detail .detail__title {
   margin: 10px 0px 5px 0px;
@@ -500,10 +581,6 @@ a:visited {
   border-bottom-right-radius: 14px;
   margin-right: -52px;
 }
-.menu__compo .compo__flex {
-  display: flex;
-  flex-direction: row;
-}
 
 .byline__anim:hover {
   margin-left: -11px;
@@ -522,7 +599,8 @@ a:visited {
   padding: 15px;
   border-radius: 25px;
   font-size: 16px;
-  box-shadow: rgba(100, 100, 111, 0.2) 0px 7px 29px 0px;
+  cursor: pointer;
+  box-shadow: rgba(0, 0, 0, 0.19) 0px 10px 20px, rgba(0, 0, 0, 0.23) 0px 6px 6px;
 }
 .order .order__button:hover {
   filter: brightness(110%);
@@ -531,15 +609,13 @@ a:visited {
 }
 
 /* Animation Section */
-.byline__anim {
-  transition: all 400ms linear;
-}
-.byline__anim:hover {
+.compo__byline:hover .byline__anim {
   transform: translate(-52px, 0);
 }
-.byline__anim:hover i {
+
+.compo__byline:hover .byline__anim i {
   transform: rotate(360deg);
-  transition: transform 400ms ease-in-out;
+  transition: transform 600ms ease-in-out;
 }
 
 @keyframes menu-animation {
@@ -580,6 +656,19 @@ footer .footer__nav .nav__link .link__mail {
   color: white !important;
 }
 
+/* Animation Section */
+footer {
+  animation: load-hide 3s ease-in-out forwards;
+}
+
+@keyframes load-hide {
+  from {
+    opacity: 0;
+  }
+  to {
+    opacity: 1;
+  }
+}
 /* Tablet section */
 @media screen and (min-width: 768px) and (max-width: 1023px) {
   #functioning {

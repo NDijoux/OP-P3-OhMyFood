@@ -61,13 +61,15 @@
     overflow: hidden;
     box-shadow: rgba(100, 100, 111, 0.2) 0px 7px 29px 0px;
     .byline__detail{
-      max-width: 65%;
+      max-width: 70%;
       padding: 0px 0px 0px 10px;
+      min-width: 0;
       .detail__title{
         margin: 10px 0px 5px 0px;
         white-space: nowrap;
         overflow: hidden;
        text-overflow: ellipsis;
+    
       }
       .detail__text{
         margin: 5px 0px 10px 0px;
@@ -75,6 +77,7 @@
         white-space: nowrap;
         overflow: hidden;
        text-overflow: ellipsis;
+       
       }
     }
     .byline__anim{
@@ -96,10 +99,6 @@
       margin-right: -52px;
       }
     }
-  }
-  .compo__flex{
-    display:flex;
-    flex-direction:row;
   }
 }
 
@@ -131,7 +130,8 @@
     padding: 15px;
     border-radius: 25px;
     font-size: 16px;
-    box-shadow: rgba(100, 100, 111, 0.2) 0px 7px 29px 0px;
+    cursor: pointer;
+    box-shadow: rgba(0, 0, 0, 0.19) 0px 10px 20px, rgba(0, 0, 0, 0.23) 0px 6px 6px;
     &:hover {
       filter: brightness(110%);
       transition: .3s;
@@ -142,16 +142,13 @@
 
 /* Animation Section */
 
-.byline__anim{
-    transition: all 400ms linear;
-    &:hover{
-    transform: translate(-52px,0);
-      i {
-      transform: rotate(360deg);
-      transition: transform 400ms ease-in-out;
-      }
-    }
-  }
+.compo__byline:hover .byline__anim {
+  transform: translate(-52px, 0);
+}
+.compo__byline:hover .byline__anim i {
+  transform: rotate(360deg);
+  transition: transform 600ms ease-in-out;
+}
 
 @keyframes menu-animation {
   from {

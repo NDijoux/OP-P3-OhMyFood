@@ -21,3 +21,18 @@ footer {
     }
   }
 }
+
+/* Animation Section */
+
+footer{
+  animation: load-hide 3s ease-in-out forwards;
+}
+
+@keyframes load-hide {
+  from {
+    opacity: 0;
+  }
+  to {
+    opacity: 1;
+  }
+}

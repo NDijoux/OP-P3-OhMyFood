@@ -32,7 +32,7 @@
     border-top-right-radius: 15px;
     object-fit: cover;
   }
-  .card__button {
+  .card__new {
     position: absolute;
     top: 5%;
     left: 72%;
@@ -72,5 +72,20 @@
         opacity: 1;
       }
     }
+  }
+}
+
+/* Animation Section */
+
+.restaurant__card{
+  animation: load-hide 3s ease-in-out forwards;
+}
+
+@keyframes load-hide {
+  from {
+    opacity: 0;
+  }
+  to {
+    opacity: 1;
   }
 }

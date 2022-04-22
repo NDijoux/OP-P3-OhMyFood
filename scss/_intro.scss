@@ -66,8 +66,7 @@ input::placeholder {
     padding: 15px;
     border-radius: 25px;
     font-size: 16px;
-    box-shadow: rgba(100, 100, 111, 0.2) 0px 7px 29px 0px;
-    cursor: pointer;
+    box-shadow: rgba(0, 0, 0, 0.19) 0px 10px 20px, rgba(0, 0, 0, 0.23) 0px 6px 6px;    cursor: pointer;
     &:hover {
       filter: brightness(110%);
       transition: .3s;
@@ -124,3 +123,76 @@ input::placeholder {
     font-weight: bold;
   }
 }
+
+/* Animation Section */
+
+#page {
+  animation: load-hide 3s ease-in-out forwards;
+}
+
+@keyframes load-hide {
+  from {
+    opacity: 0;
+  }
+  to {
+    opacity: 1;
+  }
+}
+
+.wrapper__spinner {
+  width: 100%;
+  height: 100%;
+  position: absolute;
+  top: 0;
+  left: 0;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  animation: wrapper-sinner 3 forwards;
+}
+
+@keyframes wrapper-spinner {
+  from {
+    opacity: 1;
+  }
+  to {
+    opacity: 0;
+  }
+}
+
+.spinner {
+  width: 156px;
+  height: 156px;
+  display: grid;
+  animation: spinner-plncf9 3s forwards;
+}
+
+.spinner::before,
+.spinner::after {
+  content: "";
+  grid-area: 1/1;
+  border: 9px solid;
+  border-radius: 50%;
+  border-color: #9356dc #9356dc #0000 #0000;
+  mix-blend-mode: darken;
+  animation: spinner-plncf9 3s linear forwards;
+}
+
+.spinner::after {
+  border-color: #0000 #0000 #ff79da #ff79da;
+  animation-direction: reverse;
+}
+
+@keyframes spinner-plncf9 {
+  100% {
+     transform: rotate(1turn);
+  }
+
+  from {
+    opacity: 1;
+  }
+  to {
+    opacity: 0;
+  }
+}
+
