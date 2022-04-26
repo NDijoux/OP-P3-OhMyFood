@@ -61,9 +61,8 @@
     overflow: hidden;
     box-shadow: rgba(100, 100, 111, 0.2) 0px 7px 29px 0px;
     .byline__detail{
-      max-width: 70%;
+      width: 70%;
       padding: 0px 0px 0px 10px;
-      min-width: 0;
       .detail__title{
         margin: 10px 0px 5px 0px;
         white-space: nowrap;
@@ -82,6 +81,7 @@
     }
     .byline__anim{
       display: flex;
+      margin-left: 10px;
       .anim__price{
       margin: 39px 0px 0px 0px;
       padding: 0px 20px 0px 0px;
@@ -100,10 +100,6 @@
       }
     }
   }
-}
-
-.byline__anim:hover{
-  margin-left: -11px;
 }
 
 .order {
@@ -142,8 +138,14 @@
 
 /* Animation Section */
 
+.compo__byline:hover .byline__detail {
+  width: 65%;
+  transition-duration: 400ms;
+}
+
 .compo__byline:hover .byline__anim {
   transform: translate(-52px, 0);
+  transition-duration: 400ms;
 }
 .compo__byline:hover .byline__anim i {
   transform: rotate(360deg);

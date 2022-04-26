@@ -545,9 +545,8 @@ a:visited {
   box-shadow: rgba(100, 100, 111, 0.2) 0px 7px 29px 0px;
 }
 .menu__compo .compo__byline .byline__detail {
-  max-width: 70%;
+  width: 70%;
   padding: 0px 0px 0px 10px;
-  min-width: 0;
 }
 .menu__compo .compo__byline .byline__detail .detail__title {
   margin: 10px 0px 5px 0px;
@@ -564,6 +563,7 @@ a:visited {
 }
 .menu__compo .compo__byline .byline__anim {
   display: flex;
+  margin-left: 10px;
 }
 .menu__compo .compo__byline .byline__anim .anim__price {
   margin: 39px 0px 0px 0px;
@@ -580,10 +580,6 @@ a:visited {
   border-top-right-radius: 14px;
   border-bottom-right-radius: 14px;
   margin-right: -52px;
-}
-
-.byline__anim:hover {
-  margin-left: -11px;
 }
 
 .order {
@@ -609,8 +605,14 @@ a:visited {
 }
 
 /* Animation Section */
+.compo__byline:hover .byline__detail {
+  width: 65%;
+  transition-duration: 400ms;
+}
+
 .compo__byline:hover .byline__anim {
   transform: translate(-52px, 0);
+  transition-duration: 400ms;
 }
 
 .compo__byline:hover .byline__anim i {
